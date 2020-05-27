@@ -6,6 +6,7 @@ This repo leverages `react-scripts` (included in Create React App), but strips a
 
 - Clone this repo
 - Run `yarn`
+- copy `db-sample.json` and rename to `db.json`
 
 ## Running the server
 
