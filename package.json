@@ -1,0 +1,33 @@
+{
+  "name": "react",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-icons": "^3.10.0"
+  },
+  "scripts": {
+    "start": "concurrently --names \"REACT,API\" -c \"bgBlue,bgMagenta\" \"react-scripts start\" \"json-server --watch db.json -p 3001\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-scripts": "latest",
+    "concurrently": "^5.2.0",
+    "json-server": "^0.16.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
