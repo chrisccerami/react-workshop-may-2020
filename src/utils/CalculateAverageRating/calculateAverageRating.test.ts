@@ -15,7 +15,7 @@ describe("calculateAverageRating", () => {
       const ratings = ["foo", 2, {a: 1}];
 
       expect(() => {
-        calculateAverageRating(ratings)
+        calculateAverageRating(ratings as any)
       }).toThrow("an element in the array passed to calculateAverageRating was not a number");
     });
   });

@@ -2,7 +2,7 @@
 * Calculate an average rating based on an array of numbers
 */
 
-export function calculateAverageRating(ratings) {
+export function calculateAverageRating(ratings: number[]) {
   const sum = ratings.reduce((prev, current) => {
     if (typeof(current) !== "number") {
       throw new Error("an element in the array passed to calculateAverageRating was not a number");
