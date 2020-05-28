@@ -1,5 +1,6 @@
 import React, {useReducer, useEffect, useRef} from 'react'
 import {FaWindowClose} from 'react-icons/fa';
+import {useTheme} from '../hooks/useTheme';
 
 function reducer(state, action) {
   switch(action.type) {
@@ -19,6 +20,7 @@ function initState(query = "") {
 export default function SearchInput({setQuery, query, ...inputProps}) {
   const [state, dispatch] = useReducer(reducer, query, initState);
   const uncontrolledInput = useRef();
+  const { theme } = useTheme();
 
   function changeQuery(e) {
     const value = e.target.value;
@@ -35,7 +37,7 @@ export default function SearchInput({setQuery, query, ...inputProps}) {
   }, [state.query, setQuery]);
 
   return (
-    <span style={{position: 'relative'}}>
+    <span style={{position: 'relative', background: theme.background, color: theme.foreground}}>
       {/*controlled*/}
       <label>
         Query
